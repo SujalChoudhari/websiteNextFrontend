@@ -8,7 +8,7 @@ import Head from 'next/head'
 function MyApp({ Component, pageProps }) {
   return (<>
     <Head>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+      <title>Sujal Choudhari </title>
     </Head>
     <NextNProgress />
     <Navbar />

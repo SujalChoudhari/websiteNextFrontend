@@ -26,9 +26,7 @@ function ProjectPage(props) {
                         </div>
                         <div className="flex flex-col sm:flex-row mt-10">
 
-                            <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-                                <p className="leading-relaxed text-lg mb-4 text-white">
-
+                            <div className="sm:w-2/3 leading-relaxed text-lg sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left text-white">
                                     <PortableText
 
                                         content={project.body}
@@ -36,11 +34,10 @@ function ProjectPage(props) {
                                         dataset="production"
 
                                     />
-                                </p>
 
                                 {project.categories.map((category) => {
                                     return (
-                                        <div>
+                                        <div key={category.title} >
                                             <h3>{category.title}</h3>
                                         </div>
                                     )

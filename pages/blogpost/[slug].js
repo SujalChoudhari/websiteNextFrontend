@@ -40,9 +40,7 @@ function BlogPost(props) {
                                 </p>
                                 <p className='text-gray-600'>
                                     {blog.categories.map((category) => {
-                                        return (<>
-                                        <span>{category.title}</span>
-                                        </>)
+                                        return (<span key={category.title} >{category.title}</span>)
 
                                     })}
                                 </p>

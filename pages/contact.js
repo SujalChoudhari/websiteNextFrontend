@@ -27,12 +27,12 @@ function Contact() {
                         <div className="flex flex-wrap -m-2">
                             <div className="p-2 w-full">
                                 <div className="relative">
-                                    <label for="message" className="leading-7 text-sm text-gray-400">Message</label>
+                                    <label htmlFor="message" className="leading-7 text-sm text-gray-400">Message</label>
                                     <textarea id="message" name="message" className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-blue-500 focus:bg-gray-900 focus:ring-2 focus:ring-blue-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" value={body} onChange={messageChanged} ></textarea>
                                 </div>
                             </div>
                             <div className="p-2 w-full">
-                                <button className="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg" onClick={sendMailPressed}>Send Mail</button>
+                                <button className="flex mx-auto text-white bg-blue-700 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg" onClick={sendMailPressed}>Send Mail</button>
                             </div>
                         </div>
                     </div>
