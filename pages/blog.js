@@ -6,7 +6,6 @@ import PortableText from 'react-portable-text'
 function Blog(props) {
 
     const { blogs } = props;
-    console.log(blogs)
     return (
         <>
             <section className="text-gray-400 bg-black body-font overflow-hidden">

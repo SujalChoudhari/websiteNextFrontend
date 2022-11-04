@@ -9,7 +9,6 @@ function ProjectPage(props) {
     // const { slug } = router.query
     const { project } = props
 
-    console.log(project)
     return (
         <>
             <section className="text-gray-600 body-font">

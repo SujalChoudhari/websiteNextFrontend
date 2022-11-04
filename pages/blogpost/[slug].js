@@ -9,7 +9,6 @@ function BlogPost(props) {
     // const { slug } = router.query
     const { blog } = props
 
-    console.log(blog)
     return (
         <>
             <section className="text-gray-600 body-font">
@@ -52,7 +51,6 @@ function BlogPost(props) {
                     </div>
                 </div>
             </section>
-
         </>
     )
 }

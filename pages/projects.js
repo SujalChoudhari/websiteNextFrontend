@@ -5,11 +5,10 @@ import PortableText from 'react-portable-text'
 
 function Projects(props) {
     const { projects } = props
-    console.log(projects[0])
     return (
         <>
             <section className="text-gray-400 bg-black body-font">
-                <section className="text-gray-400 bg-black body-font">
+                <section className="text-gray-400  body-font">
                     <div className="container px-5 py-14 mx-auto">
                         <div className="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
                             <h1 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-white">As a developer,
@@ -18,6 +17,7 @@ function Projects(props) {
                         </div>
                     </div>
                 </section>
+               
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-wrap -m-4">
 
