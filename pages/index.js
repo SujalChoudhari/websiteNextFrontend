@@ -124,7 +124,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='mx-32 py-3'>
+      <section className='lg:mx-32 md:mx-12 xs:mx-4 py-3'>
         <h2 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-white"> Frontend Skills</h2>
         <Skillbar skills={frontEndSkills} colors={{
           bar: "#4661fa",
@@ -135,7 +135,7 @@ export default function Home() {
         }} height={40} />
       </section>
 
-      <section className='mx-32 py-3'>
+      <section className='lg:mx-32 md:mx-12 xs:mx-4 py-3'>
         <h2 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-white"> Backend Skills</h2>
         <Skillbar skills={backEndSkills} colors={{
           bar: "#fac146",
@@ -146,7 +146,7 @@ export default function Home() {
         }} height={40} />
       </section>
 
-      <section className='mx-32 py-3'>
+      <section className='lg:mx-32 md:mx-12 xs:mx-4 py-3'>
         <h2 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-white"> GameDev Skills</h2>
         <Skillbar skills={gameDevSkills} colors={{
           bar: "#4cf55f",
