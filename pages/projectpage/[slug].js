@@ -30,14 +30,14 @@ function ProjectPage(props) {
                                     <PortableText
 
                                         content={project.body}
-                                        projectId="x4y28wp2"
-                                        dataset="production"
+                                        projectId={process.env.SANITY_PROJECT_ID}
+                                        dataset={process.env.SANITY_DATASET}
 
                                     />
 
                                 {project.categories.map((category) => {
                                     return (
-                                        <div key={category.title} >
+                                        <div className='text-sm text-gray-500' key={category.title} >
                                             <h3>{category.title}</h3>
                                         </div>
                                     )
@@ -61,10 +61,11 @@ export async function getServerSideProps(context) {
     const slug = context.query.slug
 
     const client = createClient({
-        projectId: "x4y28wp2",
-        dataset: "production",
-        useCdn: true,
+        projectId: process.env.SANITY_PROJECT_ID,
+        dataset: process.env.SANITY_DATASET,
+        useCdn: process.env.SANITY_USE_CDN,
     })
+
 
     const query = `*[_id=="${slug}"][0]{
         title,

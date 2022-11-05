@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "mongodb": "^4.11.0",
     "next": "13.0.1",
     "next-sanity": "^1.0.3",
     "nextjs-progressbar": "^0.0.16",

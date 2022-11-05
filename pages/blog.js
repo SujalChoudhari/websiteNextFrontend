@@ -53,10 +53,11 @@ export default Blog
 
 export async function getServerSideProps() {
     const client = createClient({
-        projectId: "x4y28wp2",
-        dataset: "production",
-        useCdn: false,
+        projectId: process.env.SANITY_PROJECT_ID,
+        dataset: process.env.SANITY_DATASET,
+        useCdn: process.env.SANITY_USE_CDN,
     })
+
 
     const query = `*[_type == "post"]{
         title,

@@ -9,6 +9,9 @@ function MyApp({ Component, pageProps }) {
   return (<>
     <Head>
       <title>Sujal Choudhari </title>
+      <meta name="description" content="Sujal Choudhari's Personal Website" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#000000" />
     </Head>
     <NextNProgress />
     <Navbar />

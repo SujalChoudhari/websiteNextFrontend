@@ -25,21 +25,10 @@ function Projects(props) {
 
                             return <div key={project._id} className="p-4 md:w-1/3">
                                 <div className="h-full border-2 border-gray-800  bg-gray-900 rounded-lg overflow-hidden">
-                                    <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.image.url} alt="blog" />
+                                    <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.image.url} alt="project" />
                                     <div className="p-6">
                                         <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">{project.categories[0].title}</h2>
                                         <h1 className="title-font text-lg font-medium text-white mb-3">{project.title}</h1>
-                                        <p className="leading-relaxed mb-3">
-
-                                            {/* <PortableText 
-                                    
-                                    content={project.body}
-                                    projectId = "x4y28wp2"
-                                    dataset = "production"
-                                    
-                                    /> */}
-
-                                        </p>
                                         <div className="flex items-center flex-wrap ">
                                             <Link href={`/projectpage/${project._id}`} className="text-blue-400 mx-auto inline-flex items-center md:mb-2 lg:mb-0">Learn More
                                                 <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -66,9 +55,9 @@ export default Projects
 
 export async function getServerSideProps() {
     const client = createClient({
-        projectId: "x4y28wp2",
-        dataset: "production",
-        useCdn: true,
+        projectId: process.env.SANITY_PROJECT_ID,
+        dataset: process.env.SANITY_DATASET,
+        useCdn: process.env.SANITY_USE_CDN,
     })
 
     const query = '*[_type == "project"]{title,_id,body,slug,"image" : mainImage.asset->{url},categories[]->{title}}'
