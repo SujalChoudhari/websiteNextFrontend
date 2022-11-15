@@ -10,7 +10,7 @@ function GuestBook(props) {
             <SignBook />
             <motion.div
                 animate={{ 
-                    y: 10,
+                    y: -10,
                     scale:1.1,
                 }}
                 
@@ -42,7 +42,7 @@ function GuestBook(props) {
             </section>
             <motion.div
                 animate={{ 
-                    y: 10,
+                    y: -10,
                     scale:1.1,
                 }}
                 

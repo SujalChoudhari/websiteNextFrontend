@@ -100,7 +100,7 @@ export default function Home() {
     <section className="text-gray-400 bg-gray-900 body-font">
     <motion.div
                 animate={{ 
-                    y: 10,
+                    y: -10,
                     scale:1.1,
                 }}
                 
@@ -151,7 +151,7 @@ export default function Home() {
     <section className="text-gray-400 bg-black body-font ">
     <motion.div
                 animate={{ 
-                    y: 10,
+                    y: -10,
                     scale:1.1,
                 }}
                 
