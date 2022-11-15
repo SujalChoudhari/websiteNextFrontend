@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import { NextResponse } from 'next/server'
 
 function SignBook() {
     const [name, setName] = useState('')
     const [message, setMessage] = useState('')
     const [submit, setSubmit] = useState("Submit")
+    const [submitted, setSubmitted] = useState(false)
 
 
     function nameChanged(event) {
@@ -28,7 +31,8 @@ function SignBook() {
                     setName('')
                     setMessage('')
                     setSubmit("Thank you!")
-                    
+                    setSubmitted(true)
+                    return NextResponse.redirect(ctx.req.url)
                 }
             })
 
@@ -59,7 +63,13 @@ function SignBook() {
                                 </div>
                             </div>
                             <div className="p-2 w-full">
-                                <button onClick={submitPressed} className="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">{submit}</button>
+                                <motion.button
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    onClick={submitPressed}
+                                    animate={{ d: submitted ? 0 : 1 }}
+
+                                className="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">{submit}</motion.button>
                             </div>
                         </div>
                     </div>

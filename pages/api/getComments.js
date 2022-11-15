@@ -6,11 +6,9 @@ export default async function handler(req, res) {
     const dbName = 'guestbook';
 
     await client.connect();
-    console.log('Connected successfully to server');
     const db = client.db(dbName);
     const collection = db.collection('comments');
 
-    const result = await collection.find({}).toArray()
-
+    var result =  await collection.find({}).toArray();
     res.status(200).json({ message: 'Success', comments: result })
 }
