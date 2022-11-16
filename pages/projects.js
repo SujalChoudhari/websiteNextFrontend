@@ -1,6 +1,7 @@
 import React from 'react'
 import { createClient } from 'next-sanity'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import PortableText from 'react-portable-text'
 
 function Projects(props) {
@@ -17,13 +18,18 @@ function Projects(props) {
                         </div>
                     </div>
                 </section>
-               
+
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-wrap -m-4">
 
                         {projects.map((project) => {
 
-                            return <div key={project._id} className="p-4 md:w-1/3">
+                            return <Link href={`/projectpage/${project._id}`} className="p-4 md:w-1/3">
+                                <motion.div
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                                while
+                                key={project._id} >
                                 <div className="h-full border-2 border-gray-800  bg-gray-900 rounded-lg overflow-hidden">
                                     <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.image.url} alt="project" />
                                     <div className="p-6">
@@ -39,8 +45,8 @@ function Projects(props) {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
+                            </motion.div>
+                            </Link>
                         })}
 
                     </div>
