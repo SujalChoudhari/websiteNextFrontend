@@ -38,12 +38,6 @@ export default function Home() {
     { type: "Pygame", level: 95 },
   ]
 
-
-
-
-
-
-
   return (<>
     {/* Hero */}
     <section className="text-gray-400 bg-black body-font">
@@ -57,7 +51,7 @@ export default function Home() {
                 <motion.button whileHover={{ scale: 1.5, rotate: 10, y: -10, color: "rgb(255,255,255)" }}>j</motion.button>
                 <motion.button whileHover={{ scale: 1.5, rotate: 10, y: -10, color: "rgb(255,255,255)" }}>a</motion.button>
                 <motion.button whileHover={{ scale: 1.5, rotate: 10, y: -10, color: "rgb(255,255,255)" }}>l</motion.button>
-                <motion.button whileHover={{ scale: 1.5, rotate: 10, y: -10, color: "rgb(255,255,255)" }}> </motion.button>
+                <span>  </span>
                 <motion.button whileHover={{ scale: 1.5, rotate: 10, y: -10, color: "rgb(255,255,255)" }}>C</motion.button>
                 <motion.button whileHover={{ scale: 1.5, rotate: 10, y: -10, color: "rgb(255,255,255)" }}>h</motion.button>
                 <motion.button whileHover={{ scale: 1.5, rotate: 10, y: -10, color: "rgb(255,255,255)" }}>o</motion.button>
@@ -71,14 +65,14 @@ export default function Home() {
             </span>
           </h1>
           <p className="mb-8 leading-relaxed ">
-            I am a Information Technologt Student and a Hobby Game Developer.
+            I am a Information Technologt Student and a Hobby Game Developer.<br />
             Here you can find my projects, blogs, and more.
           </p>
-          <p className='mb-8 text-gray-600'>
-            You can get to know me better by visiting the About page
+          <p className='mb-8 text-gray-500'>
+            You can get to know me better by visiting the About page.<br />
             I am always up for collabs and contributions, contact me for the same!
-
           </p>
+
           <div className="flex justify-center">
             <Link href="/projects">
               <motion.button
@@ -140,7 +134,7 @@ export default function Home() {
             className="relative z-10"
           >
 
-            <Image zIndex={5} className="object-cover object-center rounded mx-auto cursor-pointer" alt="hero" src="/sujal.png" width={300} height={1000} quality={100} loading="eager" />
+            <Image className="object-cover object-center rounded mx-auto cursor-pointer" alt="hero" src="/sujal.png" width={300} height={1000} quality={100} loading="eager" />
 
           </motion.div>
 
@@ -179,7 +173,7 @@ export default function Home() {
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap -m-4 text-center">
           <div className="p-4 sm:w-1/4 w-1/2">
-            <h2 className="title-font font-medium sm:text-4xl text-3xl text-white"><CountUp delay={5} end={200} duration={5} />+</h2>
+            <h2 className="title-font font-medium sm:text-4xl text-3xl text-white"><CountUp delay={5} end={300} duration={5} />+</h2>
             <p className="leading-relaxed">Commits</p>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
@@ -187,11 +181,11 @@ export default function Home() {
             <p className="leading-relaxed">Game Prototypes</p>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
-            <h2 className="title-font font-medium sm:text-4xl text-3xl text-white"><CountUp delay={5} end={25} duration={5} />+</h2>
+            <h2 className="title-font font-medium sm:text-4xl text-3xl text-white"><CountUp delay={5} end={35} duration={5} />+</h2>
             <p className="leading-relaxed">Open Source Projects</p>
           </div>
           <div className="p-4 sm:w-1/4 w-1/2">
-            <h2 className="title-font font-medium sm:text-4xl text-3xl text-white"><CountUp delay={5} end={4} duration={5} /></h2>
+            <h2 className="title-font font-medium sm:text-4xl text-3xl text-white"><CountUp delay={5} end={5} duration={5} /></h2>
             <p className="leading-relaxed">Game jam Wins</p>
           </div>
         </div>
@@ -262,3 +256,4 @@ export default function Home() {
   </>
   )
 }
+

@@ -10,5 +10,6 @@ export default async function handler(req, res) {
     const collection = db.collection('comments');
 
     var result =  await collection.find({}).toArray();
+    result.slice(0,10)
     res.status(200).json({ message: 'Success', comments: result })
 }

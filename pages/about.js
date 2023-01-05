@@ -30,14 +30,19 @@ function About() {
                                     I didn't knew, what I was steping into. I was just curious about programming.
                                     I started learning Python and I was amazed by the power of programming.
                                     As time went by, I started learning more and more about programming.
-                                    Soon I started learning Game Development. I started learning C# and Unity.
-                                    Made quite a few games and I officially declared myself as a Hobby Game Developer.
+                                    Soon I got into Game Development so started learning C# and Unity.
+                                    Made quite a few games, some for Jams, some just for fun.
 
                                     <br/> <br/>
-                                    In 2020, during the lockdown, I had time to explore programming. So I did, I did various projects in various diffrent languages.
-                                    I learned HTML, CSS, JavaScript, React, Next.js, Node.js, Express.js, MongoDB, Firebase, Python, C#, Unity, Blender, and many many more.
+                                    In 2020, during the lockdown, I had time to explore programming. 
+                                    So I did, I did various projects in various diffrent languages.
+                                    I learned technologies like HTML, CSS, JavaScript, React, Next.js, Node.js, 
+                                    Express.js, MongoDB, Firebase, Python, C#, Unity, Blender, and many many more.
 
-                                    Currently I am getting into Web Development. Web Development was my last option to learn. I always thought that Web Development is boring. But I was wrong. And I am here making this website.
+                                    Currently I am getting into Web Development. 
+                                    Web Development was my last option to learn. 
+                                    I always thought that Web Development is boring. 
+                                    But I was wrong. And I am here making this website.
 
                                 </p>
                             </div>
