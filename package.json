@@ -18,7 +18,8 @@
     "react-countup": "^6.3.2",
     "react-dom": "18.2.0",
     "react-portable-text": "^0.5.1",
-    "react-skillbars": "^2.1.0"
+    "react-skillbars": "^2.1.0",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
