@@ -121,14 +121,14 @@ export default function Home() {
           <motion.div
             drag={true}
             dragConstraints={{
-              left: 40,
-              right: 40,
-              top: 40,
-              bottom: 40,
+              top: -150,
+              left: -150,
+              right: 150,
+              bottom: 150,
             }}
 
-            dragElastic={0.7}
-
+            dragElastic={0.2}
+            dragTransition={{ bounceStiffness: 100, bounceDamping: 10 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="relative z-10"

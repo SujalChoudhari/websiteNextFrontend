@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import PortableText from 'react-portable-text'
 
 function Projects(props) {
-    const { projects } = props
+    const { projects } = props;
     return (
         <>
             <section className="text-gray-400 bg-black body-font">
@@ -26,12 +26,12 @@ function Projects(props) {
 
                         {projects.map((project) => {
 
-                            return <Link href={`/projectpage/${project._id}`} className="p-4 md:w-1/3">
+                            return <Link href={`/projectpage/${project._id}`} className="p-4 md:w-1/3" key={project._id}>
                                 <motion.div
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                                 while
-                                key={project._id} >
+                                 >
                                 <div className="h-full border-2 border-gray-800  bg-gray-900 rounded-lg overflow-hidden">
                                     <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.image.url} alt="project" />
                                     <div className="p-6">
