@@ -37,7 +37,7 @@ export async function getServerSideProps(context) {
     const query = `*[_id=="${slug}"][0]{
         title,
         "slug": slug.current,
-        languages[]->{language},
+        tag[]->{title},
         link
     }`
 

@@ -25,6 +25,7 @@ function Navbar() {
                         <Link href="/blog" className="mr-5 hover:text-white">Blog</Link>
                         <Link href="/guestbook" className="mr-5 hover:text-white">Guestbook</Link>
                         <Link href="/projects" className="mr-5 hover:text-white">Projects</Link>
+                        <Link href="/gallery" className="mr-5 hover:text-white">Gallery</Link>
                         <Link href="/notes" className="mr-5 hover:text-white">Notes</Link>
                     </nav>
                     <Link href="/contact">

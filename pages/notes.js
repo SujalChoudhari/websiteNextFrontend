@@ -33,9 +33,8 @@ function Notes(props) {
                                         <div className="p-6">
                                             <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
                                                 Programming Language(s): &nbsp;
-                                                {note.languages.map((indi) => {
-                                                    return (<span key={indi.language}>{indi.language}</span>)
-
+                                                {note.tag.map((indi) => {
+                                                    return (<span key={indi.title}>{indi.title}</span>)
                                                 })}
                                             </h2>
                                             <h1 className="title-font text-lg font-medium text-white mb-3">{note.title}</h1>
@@ -74,7 +73,7 @@ export async function getServerSideProps() {
         _id,
         link,
         "slug": slug.current,
-        languages[]->{language},
+        tag[]->{title},
         "date": publishedAt
     }`
     const notes = await client.fetch(query)

@@ -35,10 +35,10 @@ function ProjectPage(props) {
 
                                     />
 
-                                {project.categories.map((category) => {
+                                {project.tag?.map((tag) => {
                                     return (
-                                        <div className='text-sm text-gray-500' key={category.title} >
-                                            <h3>{category.title}</h3>
+                                        <div className='text-sm text-gray-500' key={tag.title} >
+                                            <h3>{tag.title}</h3>
                                         </div>
                                     )
 
@@ -72,7 +72,7 @@ export async function getServerSideProps(context) {
         "image" : mainImage.asset->url,
         "slug": slug.current,
         body,
-        categories[]->{title}
+        tag[]->{title}
     }`
 
     const project = await client.fetch(query)

@@ -24,7 +24,7 @@ function Blog(props) {
                                 return (
                                     <div key={blog._id} className="py-8 flex flex-wrap md:flex-nowrap">
                                         <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                                            <span className="font-semibold title-font text-white">{blog.categories[0].title}</span>
+                                            <span className="font-semibold title-font text-white">{blog.tags[0].title}</span>
                                             <span className="mt-1 text-gray-500 text-sm">{blog.date}</span>
                                         </div>
                                         <div className="md:flex-grow">
@@ -64,7 +64,7 @@ export async function getServerSideProps() {
         _id,
         body,
         "slug": slug.current,
-        categories[]->{title},
+        tags[]->{title},
         "date": publishedAt,
         "image" : mainImage.asset->url
     }`

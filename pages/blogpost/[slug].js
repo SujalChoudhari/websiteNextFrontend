@@ -27,20 +27,25 @@ function BlogPost(props) {
                         <div className="flex flex-col sm:flex-row mt-10">
 
                             <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left text-white">
-                                    <PortableText
+                                <PortableText
 
-                                        content={blog.body}
-                                        projectId={process.env.SANITY_PROJECT_ID}
-                                        dataset={process.env.SANITY_DATASET}
+                                    content={blog.body}
+                                    projectId={process.env.SANITY_PROJECT_ID}
+                                    dataset={process.env.SANITY_DATASET}
 
-                                    />
+                                />
 
                                 <p className='text-gray-600'>
                                     {blog.time}
                                 </p>
                                 <p className='text-gray-600'>
-                                    {blog.categories.map((category) => {
-                                        return (<span key={category.title} >{category.title}</span>)
+                                    {blog.tags.map((tags) => {
+                                        return (
+                                            <span key={tags.title} >
+                                                <span>{tags.title}</span> <br/> <br/>
+                                                <span>{tags.description}</span>
+                                            </span>
+                                        )
 
                                     })}
                                 </p>
@@ -71,7 +76,7 @@ export async function getServerSideProps(context) {
         "image" : mainImage.asset->url,
         "slug": slug.current,
         body,
-        "categories": categories[]->{title,description},
+        "tags": tags[]->{title,description},
         "time": publishedAt,
     }`
 
