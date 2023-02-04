@@ -33,15 +33,15 @@ function About() {
                                     Soon I got into Game Development so started learning C# and Unity.
                                     Made quite a few games, some for Jams, some just for fun.
 
-                                    <br/> <br/>
-                                    In 2020, during the lockdown, I had time to explore programming. 
+                                    <br /> <br />
+                                    In 2020, during the lockdown, I had time to explore programming.
                                     So I did, I did various projects in various diffrent languages.
-                                    I learned technologies like HTML, CSS, JavaScript, React, Next.js, Node.js, 
+                                    I learned technologies like HTML, CSS, JavaScript, React, Next.js, Node.js,
                                     Express.js, MongoDB, Firebase, Python, C#, Unity, Blender, and many many more.
 
-                                    Currently I am getting into Web Development. 
-                                    Web Development was my last option to learn. 
-                                    I always thought that Web Development is boring. 
+                                    Currently I am getting into Web Development.
+                                    Web Development was my last option to learn.
+                                    I always thought that Web Development is boring.
                                     But I was wrong. And I am here making this website.
 
                                 </p>

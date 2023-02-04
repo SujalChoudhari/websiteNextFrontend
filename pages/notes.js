@@ -29,7 +29,7 @@ function Notes(props) {
                                     while
                                     key={note._id} >
                                     <div className="h-full border-2 border-gray-800  bg-gray-900 rounded-lg overflow-hidden">
-                                        {/* <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={`https://source.unsplash.com/720x400/?${note.slug}`} alt="blog" /> */}
+                                        <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={`https://source.unsplash.com/720x400/?${note.slug}`} alt="blog" />
                                         <div className="p-6">
                                             <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">
                                                 Programming Language(s): &nbsp;

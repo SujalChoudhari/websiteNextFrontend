@@ -1,18 +1,18 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 
 function Contact() {
     const [body, setBody] = useState('')
-    function messageChanged(event){
+    function messageChanged(event) {
         setBody(event.target.value)
     }
 
-    function sendMailPressed(){
+    function sendMailPressed() {
         const mailto = `mailto:
         ?subject= Contact from your Website
         &body=${body}`
         window.location.href = mailto;
     }
-    
+
     return (
         <>
             <section className="text-gray-400 bg-black body-font relative">

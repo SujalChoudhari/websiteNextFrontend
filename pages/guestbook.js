@@ -66,9 +66,10 @@ export default GuestBook
 
 export async function getServerSideProps(ctx) {
 
-    // const data = await fetch('http://localhost:3000/api/getComments')
+    const data = await fetch('http://localhost:3000/api/getComments')
     // const data = await fetch('http://sujalchoudhari.me/api/getComments')
-    const data = await fetch('http://website-next-frontend.vercel.app/api/getComments')
+    // const data = await fetch('https://sujalchoudhari.vercel.app/api/getComments')
+    console.log(data)
     var { comments } = await data.json()
     comments = comments.reverse()
     return {
