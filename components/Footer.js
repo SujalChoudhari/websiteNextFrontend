@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import styles from '../styles/Footer.module.css'
 import { motion } from 'framer-motion'
+import NavigationLinks from './NavigationLinks'
 
 function Footer() {
     return (
@@ -29,6 +30,7 @@ function Footer() {
                     </Link>
                     <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">A Computer Enthusiast
                     </p>
+                    <NavigationLinks/>
                     <div className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start space-x-4">
                         <a href="https://www.facebook.com/sujal.choudhary.921/" className={styles.facebook} target="_blank " rel="noopener">
                             <i className="fab fa-facebook fa-2x" />

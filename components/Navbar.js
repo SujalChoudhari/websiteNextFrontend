@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Script from 'next/script'
-
+import NavigationLinks from './NavigationLinks'
 function Navbar() {
 
     // const [move, setMove] = React.useState(false)
@@ -19,15 +19,7 @@ function Navbar() {
                             alt="Logo" src="/logo.png" className="w-20 h-20 text-white p-2 rounded-full" />
                         <span className="ml-3 text-xl">Sujal Choudhari</span>
                     </Link>
-                    <nav className="md:ml-auto flex flex-wrap items-center font-medium text-base justify-center">
-                        <Link href="/" className="mr-5 hover:text-white">Home</Link>
-                        <Link href="/about" className="mr-5 hover:text-white">About</Link>
-                        <Link href="/blog" className="mr-5 hover:text-white">Blog</Link>
-                        <Link href="/guestbook" className="mr-5 hover:text-white">Guestbook</Link>
-                        <Link href="/projects" className="mr-5 hover:text-white">Projects</Link>
-                        <Link href="/gallery" className="mr-5 hover:text-white">Gallery</Link>
-                        <Link href="/notes" className="mr-5 hover:text-white">Notes</Link>
-                    </nav>
+                    <NavigationLinks />
                     <Link href="/contact">
                         <button className="inline-flex text-white items-center bg-blue-700 border-0 py-1 px-3 focus:outline-none hover:bg-blue-500 rounded text-base mt-4 md:mt-0">Contact
                             <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
