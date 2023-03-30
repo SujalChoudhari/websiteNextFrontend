@@ -39,7 +39,7 @@ function BlogPost(props) {
                                     {blog.time}
                                 </p>
                                 <p className='text-gray-600'>
-                                    {blog.tags.map((tags) => {
+                                    {blog.tags?.map((tags) => {
                                         return (
                                             <span key={tags.title} >
                                                 <span>{tags.title}</span> <br/> <br/>
