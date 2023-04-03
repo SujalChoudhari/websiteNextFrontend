@@ -65,7 +65,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="mb-8 leading-relaxed ">
-            I am a Information Technologt Student and a Hobby Game Developer.<br />
+            I am a Information Technology Student and a Hobby Game Developer.<br />
             Here you can find my projects, blogs, and more.
           </p>
           <p className='mb-8 text-gray-500'>
