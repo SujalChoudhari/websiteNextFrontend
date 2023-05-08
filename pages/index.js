@@ -38,6 +38,16 @@ export default function Home() {
     { type: "Pygame", level: 95 },
   ]
 
+  // red theme
+  const miscSkills = [
+    { type: "Android", level: 55 },
+    { type: "Programming Languages", level: 75 },
+    { type: "API", level: 80 },
+    { type: "Illustrations", level: 90 },
+    { type: "Product Designer", level: 50 },
+    { type: "Game Engines", level: 95 },
+  ]
+
   return (<>
     {/* Hero */}
     <section className="text-gray-400 bg-black body-font">
@@ -78,12 +88,12 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-
-
                 className="inline-flex text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-500 rounded text-lg">Projects</motion.button>
             </Link>
-            <Link href="/contact">
-              <button className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">Contact</button>
+            <Link href="/Sujal Choudhari.pdf">
+              <button className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
+                Resume
+              </button>
             </Link>
           </div>
         </div>
@@ -241,6 +251,13 @@ export default function Home() {
         }} height={40} />
       </section>
 
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/> 
+
       <section className='lg:mx-32 md:mx-12 mx-4 py-3'>
         <h2 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-white"> GameDev Skills</h2>
         <Skillbar skills={gameDevSkills} colors={{
@@ -248,6 +265,17 @@ export default function Home() {
           title: {
             text: "black",
             background: "#19fa33"
+          }
+        }} height={40} />
+      </section>
+
+      <section className='lg:mx-32 md:mx-12 mx-4 py-3'>
+        <h2 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-white"> Miscellanous Skills</h2>
+        <Skillbar skills={miscSkills} colors={{
+          bar: "#aa5050",
+          title: {
+            text: "black",
+            background: "#bb7070"
           }
         }} height={40} />
       </section>

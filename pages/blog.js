@@ -27,7 +27,7 @@ function Blog(props) {
                                     </div>
                                     <div className="md:flex-grow">
                                         <h2 className="text-2xl font-medium text-white leading-tight mb-2">{blog.title}</h2>
-                                        <Link href={`blogpost/${blog._id}`} className="inline-flex items-center text-blue-400 hover:text-blue-500">
+                                        <Link href={`/blogpost/${blog._id}`} className="inline-flex items-center text-blue-400 hover:text-blue-500">
                                             Read more
                                             <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                 <path d="M5 12h14"></path>
@@ -58,14 +58,12 @@ export async function getServerSideProps() {
     })
 
 
-    const query = `*[_type == "post"]{
+    const query = `*[_type == "blog"]{
         title,
         _id,
-        body,
         "slug": slug.current,
-        tags[]->{title},
-        "date": publishedAt,
-        "image" : mainImage.asset->url
+        tag[]->{title},
+        link
     }`
     const blogs = await client.fetch(query)
 

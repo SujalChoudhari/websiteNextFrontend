@@ -2,63 +2,47 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import { createClient } from 'next-sanity'
 
-import PortableText from 'react-portable-text'
 
-function BlogPost(props) {
-    const router = useRouter()
-    // const { slug } = router.query
+function BlogPage(props) {
     const { blog } = props
-
     return (
-        <>
-            <section className="text-gray-600 body-font">
-                <section className="text-gray-400 bg-black body-font">
-                    <div className="container px-5 mx-auto">
-                        <div className="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
-                            <h1 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-white">{blog.title}</h1>
+        <div className='flex flex-col justify-center  items-center mx-auto'>
+            <h1 className="text-3xl font-bold leading-tight mb-4 text-center">
+                {blog.title}
+            </h1>
+        <iframe
+            allow="fullscreen"
+            title={`${blog.title}`}
+            className='flex justify-center items-center mx-auto'
+            src={`${blog.link}`}
+            height="848"
+            width="504"
+            >
+
+        </iframe>
+
+        
+        {
+            blog.category.map((tag) => {
+                return (
+                    <div key={tag._id} className="py-8 flex flex-col sm:flex-row items-start">
+                        <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+                            <span className="font-semibold text-white">{tag.title}</span>
+                            {/* <span className="mt-1 text-gray-500 text-sm">{blog.date}</span> */}
                         </div>
                     </div>
-                </section>
-                <div className="container px-5 py-24 mx-auto flex flex-col">
-                    <div className="lg:w-4/6 mx-auto">
-                        <div className="rounded-lg h-64 overflow-hidden">
-                            <img alt="content" className="object-cover object-center h-full w-full" src={blog.image} />
-                        </div>
-                        <div className="flex flex-col sm:flex-row mt-10">
+                )
+            }
+            )
+        }
 
-                            <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left text-white">
-                                <PortableText
+        </div>
 
-                                    content={blog.body}
-                                    projectId={process.env.SANITY_PROJECT_ID}
-                                    dataset={process.env.SANITY_DATASET}
-
-                                />
-
-                                <p className='text-gray-600'>
-                                    {blog.time}
-                                </p>
-                                <p className='text-gray-600'>
-                                    {blog.tags?.map((tags) => {
-                                        return (
-                                            <span key={tags.title} >
-                                                <span>{tags.title}</span> <br/> <br/>
-                                                <span>{tags.description}</span>
-                                            </span>
-                                        )
-
-                                    })}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </>
+        // <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7053239809485520896" height="848" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
     )
 }
 
-export default BlogPost
+export default BlogPage
 
 
 export async function getServerSideProps(context) {
@@ -73,14 +57,13 @@ export async function getServerSideProps(context) {
 
     const query = `*[_id=="${slug}"][0]{
         title,
-        "image" : mainImage.asset->url,
         "slug": slug.current,
-        body,
-        "tags": tags[]->{title,description},
-        "time": publishedAt,
+        category[]->{title},
+        link
     }`
 
     const blog = await client.fetch(query)
+    console.log(blog)
 
     return {
         props: {
