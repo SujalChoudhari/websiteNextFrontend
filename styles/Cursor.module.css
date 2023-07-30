@@ -1,0 +1,23 @@
+.cursor {
+    background-color: #d5d5d5;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 30px #d5d5d5;
+}
+
+.cursor-hover {
+    background-color: #d5d5d5;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 30px #d5d5d5;
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+}

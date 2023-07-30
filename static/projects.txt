@@ -1,0 +1,14 @@
+PROJECTS
+Neptune Js— A Javascript Game Engine
+Neptune is a set of JavaScript modules designed for writing video games.
+Solaris UI— A Typescript UI framework
+A UI framework to create HTML pages with just JavaScript.
+Coda— A Interpreted Programming Language
+A small interpreter written in C++
+Cyber— A Python Discord Bot
+A Multipurpose discord bot made in python
+And Many More…
+Find My projects on Github page
+
+This file is not maintaied anymore, 
+run ssh ./m/projects/ to see the updated version

@@ -1,0 +1,59 @@
+.playground-container {
+    z-index: 9999;
+}
+
+/* The rest of your existing CSS remains unchanged */
+.playground-container {
+    padding: 10px;
+    font-size: 1rem;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    width: 40vw;
+    color: #ffffff40;
+    position: fixed; /* Change 'absolute' to 'fixed' */
+    left: 1vw; /* Adjust the right distance as needed */
+    bottom: 1vh; /* Adjust the bottom distance as needed */
+}
+
+
+.playground-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.playground-input {
+    margin-top: 2rem;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: #ffffffff;
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    width: 200px;
+}
+
+.playground-response {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #ffffff80;
+    font-size: 16px;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    transition: 0.2s;
+}
+
+.playground-user {
+    color: #ffffff40;
+    font-size: 16px;
+    margin-top: 2rem;
+    font-family: 'Space Mono', monospace;
+}
+
+.hidden {
+    display: none;
+}

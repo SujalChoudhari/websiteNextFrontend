@@ -4,14 +4,11 @@ import { motion } from 'framer-motion'
 import Script from 'next/script'
 import NavigationLinks from './NavigationLinks'
 function Navbar() {
-
-    // const [move, setMove] = React.useState(false)
-
     return (
         <>
             <header className="text-gray-400 bg-gray-900 body-font">
                 <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" >
-                    <Link href="/" className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                    <Link href="/m/" className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
                         <motion.img
                             duration={1}
                             whileHover={{ scale: 1.1 }}
