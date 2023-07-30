@@ -38,6 +38,11 @@ function helpHandler() {
             usage: "ls [-l] [-a]",
         },
         {
+            name: "cls",
+            description: "Clear the terminal screen.",
+            usage: "cls | clear",
+        },
+        {
             name: "ssh",
             description: "Connect to a remote server via SSH.",
             usage: "ssh <url>",

@@ -41,6 +41,8 @@ const Playground = () => {
 
                     if (data.redirect) {
                         router.push(data.redirect);
+                        setCommand('');
+                        setOutput('');
                     } else {
                         addResponse(data.response);
                     }
