@@ -6,7 +6,7 @@ const Playground = () => {
     const [command, setCommand] = useState('');
     const [output, setOutput] = useState('');
     const router = useRouter();
-    const userName = "guest@sujal:/home/user/documents# ";
+    const userName = "user@ubuntu:/home/user/documents# ";
 
     const handleCommandChange = (event) => {
         setCommand(event.target.value);
@@ -72,7 +72,7 @@ const Playground = () => {
                     onChange={handleCommandChange}
                     onKeyDown={handleSubmit}
                     className={styles['playground-input']}
-                    placeholder="whoami"
+                    placeholder="ls"
                 />
             </div>
         </div>

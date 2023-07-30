@@ -4,7 +4,7 @@ import path from 'path';
 
 export default function handler(command) {
     if (command.startsWith("help")) {
-        return helpHandler();
+        return helpHandler(command);
     } else if (command.startsWith("ls")) {
         return lsHandler(command);
     } else if (command.startsWith("pwd")) {
@@ -23,14 +23,14 @@ export default function handler(command) {
         return aboutHandler();
     } else if (command.startsWith("version")) {
         return versionHandler();
-    } else if (command.startsWith("fortune")) {
-        return fortuneHandler();
+    } else if (command.startsWith("random")) {
+        return randomHandler();
     } else {
         return "Invalid command. Type 'help' to see available commands.";
     }
 }
 
-function helpHandler() {
+function helpHandler(command) {
     const commands = [
         {
             name: "ls",
@@ -88,19 +88,15 @@ function helpHandler() {
             usage: "version",
         },
         {
-            name: "fortune",
-            description: "Display a random fortune or quote.",
-            usage: "fortune",
+            name: "random",
+            description: "Display a random quote.",
+            usage: "random",
         },
     ];
 
     const helpMessage = `
   Available commands:\n${commands
-            .map((cmd) => `  ${cmd.name}\t${cmd.description}`)
-            .join("\n")}
-  
-  For detailed usage, use:\n${commands
-            .map((cmd) => `  ${cmd.usage}`)
+            .map((cmd) => `\t${cmd.name}\t\t${cmd.description}`)
             .join("\n")}`;
 
     return helpMessage;
@@ -125,7 +121,7 @@ function lsHandler(command) {
     const showDetailedInfo = flags.includes("-l") || flags.includes("-la") || flags.includes("-al");
 
     // Filter out hidden files if not requested
-    const filteredFiles = showHiddenFiles ? files : files.filter((file) => !file.startsWith("."));
+    const filteredFiles = showHiddenFiles ? files : files.filter((file) => !file.startsWith("_"));
 
     if (showDetailedInfo) {
         // Fetch detailed file information for all files (including hidden files)
@@ -212,7 +208,7 @@ function versionHandler() {
     return "Version 1.1.2";
 }
 
-function fortuneHandler() {
+function randomHandler() {
     // Prototype data for some fun fortunes related to programming
     const fortunes = [
         "A computer program does what you tell it to do, not what you want it to do.",

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import styles from '../styles/Footer.module.css'
 import { motion } from 'framer-motion'
-import NavigationLinks from './NavigationLinks'
+import NavigationLinks from './mobile-navigation-links'
 
 function Footer() {
     return (

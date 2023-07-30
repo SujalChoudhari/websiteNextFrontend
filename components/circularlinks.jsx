@@ -19,7 +19,7 @@ const CircularLinks = ({ links }) => {
             const linkEl = document.createElement('a');
             linkEl.href = link.url;
             linkEl.className = styles.link;
-            linkHolderEl.style.transform = `rotate(${(Math.PI/2 -  angle*index).toFixed(5)}rad) translate(${radius}px) rotate(${-(
+            linkHolderEl.style.transform = `rotate(${(Math.PI/2 -  angle*index).toFixed(5)}rad) translate(${radius + 5 * index}px) rotate(${-(
                 Math.PI/2 - angle * index
             ).toFixed(5)}rad)`;
 

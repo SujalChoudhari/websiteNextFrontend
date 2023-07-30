@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Script from 'next/script'
-import NavigationLinks from './NavigationLinks'
+import NavigationLinks from './mobile-navigation-links'
 function Navbar() {
     return (
         <>

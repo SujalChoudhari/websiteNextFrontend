@@ -1,33 +1,12 @@
 import Banner from "../components/banner";
 import CircularLinks from "../components/circularlinks";
-import CodingVideo from "../components/coding";
+import VideoBackgroundPlayer from "../components/video-player";
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 
 export default function Home() {
-  const router = useRouter();
 
-  useEffect(() => {
-    const handleResize = () => {
-      const screenWidth = window.innerWidth;
-      // Adjust this width threshold based on your definition of mobile
-      const isMobile = screenWidth <= 768; // For example, considering screens 768px and below as mobile
-
-      if (isMobile) {
-        router.push('./m/'); // Redirect to the mobile version of the site
-      }
-    };
-
-    // Check screen width on initial mount and when resizing
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [router]);
 
 
   return (
@@ -35,7 +14,7 @@ export default function Home() {
       <Banner>
         <a href="./m">Go to the mobile version of this website.</a>
       </Banner>
-      <CodingVideo />
+      <VideoBackgroundPlayer src="./coding.mp4" />
 
       <span>
         <CircularLinks

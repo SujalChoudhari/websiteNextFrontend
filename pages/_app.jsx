@@ -1,40 +1,40 @@
-import '../styles/globals.css'
-
+import React from 'react';
 import NextNProgress from 'nextjs-progressbar';
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import Playground from '../components/playground'
-import Head from 'next/head'
+import Head from 'next/head';
 import { Analytics } from '@vercel/analytics/react';
+import Navbar from '../components/mobile-navbar';
+import MobileRedirection from '../components/MobileRedirection';
+import Footer from '../components/mobile-footer';
+import Playground from '../components/Playground';
+import '../styles/globals.css';
 
-function MyApp({ Component, pageProps, ...appProps }) {
-  return (<>
-    <Head>
-      <title> Sujal Choudhari </title>
-      <meta name="description" content="Sujal Choudhari's Personal Website" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#000000" />
-    </Head>
-    {appProps.router.pathname.includes("m") &&
-      <>
-        <NextNProgress />
-        <Navbar />
+const MyApp = ({ Component, pageProps, router }) => {
+  const isMobilePath = router.pathname.includes('m');
 
-      </>
-    }
-    <Component {...pageProps} />
-    <Playground />
-    <Analytics />
+  return (
+    <>
+      <Head>
+        <title>Sujal Choudhari</title>
+        <meta name="description" content="Sujal Choudhari's Personal Website" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+      </Head>
 
-    {appProps.router.pathname.includes("m") &&
-      <>
-        <Footer />
-      </>
-    }
+      {isMobilePath && (
+        <>
+          <NextNProgress />
+          <Navbar />
+        </>
+      )}
 
+      <Component {...pageProps} />
+      {!isMobilePath  && <MobileRedirection/>}
+      {!isMobilePath && <Playground />}
+      <Analytics />
 
+      {isMobilePath && <Footer />}
+    </>
+  );
+};
 
-  </>)
-}
-
-export default MyApp
+export default MyApp;

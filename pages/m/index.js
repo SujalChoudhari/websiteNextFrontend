@@ -3,12 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import CountUp from 'react-countup';
 import Skillbar from 'react-skillbars';
+import Banner from '../../components/banner';
 import { motion } from 'framer-motion'
 
 
 
 export default function Home() {
-
+  
   // blue theme
   const frontEndSkills = [
     { type: "HTML", level: 80 },
@@ -48,7 +49,9 @@ export default function Home() {
   ]
 
   return (<>
-    {/* Hero */}
+    <Banner>
+      <a href='/'>Go to the desktop version of this site.</a>
+    </Banner>
     <section className="text-gray-400  body-font">
       <div className="container mx-auto flex px-5  md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:mx-4 lg:mx-8 md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
@@ -250,12 +253,12 @@ export default function Home() {
         }} height={40} />
       </section>
 
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/> 
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
 
       <section className='lg:mx-32 md:mx-12 mx-4 py-3'>
         <h2 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-white"> GameDev Skills</h2>

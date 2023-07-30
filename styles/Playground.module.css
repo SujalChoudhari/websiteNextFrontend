@@ -21,6 +21,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 .playground-input {
@@ -33,7 +34,7 @@
     color: #ffffffff;
     font-family: 'Space Mono', monospace;
     font-size: 16px;
-    width: 200px;
+    width: 100%;
 }
 
 .playground-response {

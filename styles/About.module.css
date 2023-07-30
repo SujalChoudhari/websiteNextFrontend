@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.image-left{
+    transform: rotateY(-180deg);
+}
+
+.output-text{
+    text-align: justify;
+    text-justify: inter-word;
+    
+}
+
+.output-container{
+    margin-bottom: 2rem;
+    width: 40vw;
+    height: 80vh;
+    padding: 2rem;
+    border-radius: 30px;
+    background-color: #22222233;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.output-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.input-container{
+    width: 40vw;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    background-color: #22222299;
+    font-family: monospace;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.send-button {
+    cursor: pointer;
+}
