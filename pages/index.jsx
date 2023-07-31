@@ -1,14 +1,8 @@
 import Banner from "../components/banner";
 import CircularLinks from "../components/circularlinks";
 import VideoBackgroundPlayer from "../components/video-player";
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-
 
 export default function Home() {
-
-
-
   return (
     <>
       <Banner>

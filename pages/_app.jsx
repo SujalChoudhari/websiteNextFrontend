@@ -3,9 +3,9 @@ import NextNProgress from 'nextjs-progressbar';
 import Head from 'next/head';
 import { Analytics } from '@vercel/analytics/react';
 import Navbar from '../components/mobile-navbar';
-import MobileRedirection from '../components/MobileRedirection';
+import MobileRedirection from '../components/mobile-redirection';
 import Footer from '../components/mobile-footer';
-import Playground from '../components/Playground';
+import Playground from '../components/playground';
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps, router }) => {
