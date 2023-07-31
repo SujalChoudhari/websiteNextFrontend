@@ -9,17 +9,19 @@ function About() {
 
     const [title, setTitle] = useState('');
     const [text, setText] = useState('');
+    // const [wordIndex, setWordIndex] = useState(0);
 
     const startAnimation = () => {
         setText('');
         setTitle('About Me');
         const words = aboutMe.split(" ");
-        let wordIndex = 0;
+        var wordIndex = 0;
+        console.log(words);
 
         const animateText = () => {
             if (wordIndex < words.length) {
                 setText((text) => (text ? text + ' ' : '') + words[wordIndex]);
-                wordIndex++;
+                wordIndex += 1;
                 requestAnimationFrame(animateText);
             }
         };

@@ -6,8 +6,8 @@ const executeCommand = async (req, res) => {
       const command = req.body;
 
       // Check if the command is a redirection command
-      if (command.trim().toLowerCase().startsWith('ssh ')) {
-        const url = command.trim().slice(4); // Remove 'ssh ' from the command to get the URL
+      if (command.trim().toLowerCase().startsWith('xdg-open ')) {
+        const url = command.trim().slice(9); // Remove 'ssh ' from the command to get the URL
         res.status(200).json({ redirect: url });
         return;
       }

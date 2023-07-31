@@ -1,5 +1,5 @@
 import React from 'react'
-import SignBook from '../../components/SignBook'
+import SignBook from '../../components/mobile-sign-book'
 import { motion } from 'framer-motion'
 
 function GuestBook(props) {

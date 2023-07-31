@@ -1,7 +1,6 @@
 import React from 'react'
 import { createClient } from 'next-sanity'
 import Link from 'next/link'
-import PortableText from 'react-portable-text'
 
 function Blog(props) {
 

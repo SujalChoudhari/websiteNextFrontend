@@ -43,9 +43,9 @@ function helpHandler(command) {
             usage: "cls | clear",
         },
         {
-            name: "ssh",
-            description: "Connect to a remote server via SSH.",
-            usage: "ssh <url>",
+            name: "xdg-open",
+            description: "Open a URL.",
+            usage: "xdg-open <url>",
         },
         {
             name: "pwd",
