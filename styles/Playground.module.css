@@ -20,12 +20,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
-    margin-left: 20px;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
 }
 
 .playground-input {
-    margin-top: 2rem;
+    margin-top: 2vw;
     padding: 8px 12px;
     border-radius: 8px;
     border: none;
@@ -33,7 +33,7 @@
     background-color: rgba(255, 255, 255, 0);
     color: #ffffffff;
     font-family: 'Space Mono', monospace;
-    font-size: 16px;
+    font-size: 1vw  ;
     width: 100%;
 }
 
@@ -50,8 +50,8 @@
 
 .playground-user {
     color: #ffffff40;
-    font-size: 16px;
-    margin-top: 2rem;
+    font-size: 1vw;
+    margin-top: 2vw;
     font-family: 'Space Mono', monospace;
 }
 

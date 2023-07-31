@@ -12,17 +12,19 @@ function About() {
     // const [wordIndex, setWordIndex] = useState(0);
 
     const startAnimation = () => {
+        if (text.length !== 0 && text.length !== aboutMe.length) return;
         setText('');
         setTitle('About Me');
-        const words = aboutMe.split(" ");
-        var wordIndex = 0;
-        console.log(words);
+        var characterIndex = 0;
 
         const animateText = () => {
-            if (wordIndex < words.length) {
-                setText((text) => (text ? text + ' ' : '') + words[wordIndex]);
-                wordIndex += 1;
-                requestAnimationFrame(animateText);
+            if (characterIndex < aboutMe.length) {
+                setText(aboutMe.substring(0, Math.min(characterIndex, aboutMe.length)));
+                characterIndex += 20;
+                setTimeout(animateText, 50);
+            }
+            else {
+                setText(aboutMe);
             }
         };
 
@@ -32,13 +34,13 @@ function About() {
 
 
 
-    
+
     return <>
         <VideoBackgroundPlayer src="./abstract1.mp4" />
 
         <div className={styles.container}>
             <div>
-                <Image className={styles['image-left']} src="/sujal.png" alt="Picture of the author" width={400} height={300} onLoad={startAnimation}/>
+                <Image className={styles['image-left']} src="/sujal.png" alt="Picture of the author" width={400} height={300} onLoad={startAnimation} />
             </div>
             <div>
                 <div className={styles['output-container']}>
