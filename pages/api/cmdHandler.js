@@ -106,7 +106,7 @@ function helpHandler(command) {
 
 function lsHandler(command) {
     // Get the path to the public folder
-    const publicFolderPath = path.join(process.cwd(), 'static');
+    const publicFolderPath = path.join(process.cwd(), 'playground');
 
     // Read the files in the public folder
     const files = fs.readdirSync(publicFolderPath);
@@ -177,7 +177,7 @@ function catHandler(command) {
     const fileName = command.substring("cat".length).trim();
 
     // Get the path to the file in the static folder
-    const filePath = path.join(process.cwd(), 'static', fileName);
+    const filePath = path.join(process.cwd(), 'playground', fileName);
 
     try {
         // Read the content of the file
