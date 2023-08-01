@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Script from 'next/script'
 import NavigationLinks from './mobile-navigation-links'
-function Navbar() {
+function MobileNavbar() {
     return (
         <>
             <header className="text-gray-400 bg-gray-900 body-font">
@@ -44,4 +44,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default MobileNavbar

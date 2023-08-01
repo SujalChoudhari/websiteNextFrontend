@@ -1,0 +1,27 @@
+.navbar {
+    z-index: 9999;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    opacity: 0.3;
+    transform: translate(50%) rotate(90deg) translate(-50%);
+    padding-top: 2vw;
+    width: 98vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar:hover {
+    opacity: 1;
+    transition: 0.5s;
+}   
+.link {
+    color: #fff;
+    font-variant-caps: all-petite-caps;
+    font-size: 1.3vw;
+}
+
+.link:hover {
+    color: #70f8ff;
+    transition: 0.2s;
+}

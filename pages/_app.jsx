@@ -2,7 +2,8 @@ import React from 'react';
 import NextNProgress from 'nextjs-progressbar';
 import Head from 'next/head';
 import { Analytics } from '@vercel/analytics/react';
-import Navbar from '../components/mobile-navbar';
+import MobileNavbar from '../components/mobile-navbar';
+import Navbar from '../components/navbar';
 import MobileRedirection from '../components/mobile-redirection';
 import Footer from '../components/mobile-footer';
 import Playground from '../components/playground';
@@ -23,11 +24,12 @@ const MyApp = ({ Component, pageProps, router }) => {
       {isMobilePath && (
         <>
           <NextNProgress />
-          <Navbar />
+          <MobileNavbar />
         </>
       )}
 
       <Component {...pageProps} />
+      {!isMobilePath &&router.pathname !== '/' && <Navbar />}
       {!isMobilePath  && <MobileRedirection/>}
       {!isMobilePath && <Playground />}
       <Analytics />

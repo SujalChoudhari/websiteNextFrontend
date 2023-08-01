@@ -25,7 +25,7 @@ function Projects(props) {
 
                         {projects.map((project) => {
 
-                            return <Link href={`/projectpage/${project._id}`} className="p-4 md:w-1/3" key={project._id}>
+                            return <Link href={`/m/projectpage/${project._id}`} className="p-4 md:w-1/3" key={project._id}>
                                 <motion.div
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.9 }}
@@ -43,7 +43,7 @@ function Projects(props) {
                                             {/* <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">{project.tag[0].title}</h2> */}
                                             <h1 className="title-font text-lg font-medium text-white mb-3">{project.title}</h1>
                                             <div className="flex items-center flex-wrap ">
-                                                <Link href={`/projectpage/${project._id}`} className="text-blue-400 mx-auto inline-flex items-center md:mb-2 lg:mb-0">Learn More
+                                                <Link href={`/m/projectpage/${project._id}`} className="text-blue-400 mx-auto inline-flex items-center md:mb-2 lg:mb-0">Learn More
                                                     <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                         <path d="M5 12h14"></path>
                                                         <path d="M12 5l7 7-7 7"></path>

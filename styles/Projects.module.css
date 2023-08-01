@@ -1,0 +1,154 @@
+.container {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 98vw;
+}
+
+.input-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* .output-container {} */
+
+.input-surprise {
+    margin-left: 0.8vw;
+    padding: 0.9vh 0.9vw;
+    font-size: 0.8vw;
+    border-radius: 10px;
+    width: 80vw;
+    font-weight: bold;
+    background-color: #333a;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.input-surprise:hover {
+    background-color: #333f;
+}
+
+.input-text {
+    background-color: rgba(69, 69, 69, 0.9);
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    padding: 1vh 2vw;
+    width: 80vw;
+    color: rgba(222, 222, 222, 0.727);
+    border-radius: 5px;
+    box-shadow: -3px 3px 10px #333a;
+    display: flex;
+    justify-content: space-between;
+}
+
+.generate-button {
+    border-left: 2px solid #333f;
+    padding-left: 2vw;
+    color: #fff7;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.generate-button:hover {
+    color: #ffff;
+}
+
+.input-subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.input-subtitle b {
+    cursor: not-allowed;
+    margin: 0 0.5vw;
+}
+
+/* General styles */
+.output-card-section {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90vw;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15vw;
+    opacity: 0;
+}
+
+.box {
+    width: 20vw;
+    height: 20vw;
+    margin: 0.4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(29, 29, 29, 0.236);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.output-section-show {
+    opacity: 1;
+    animation: show 1s ease 1;
+}
+
+.project-image-holder {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.project-image {
+    width: 20vw;
+    height: 20vw;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.project-title {
+    position: absolute;
+    display: none;
+    background-color: #333f;
+    padding: 1vh 2vw;
+    color: #fff;
+    border-radius: 5px;
+    translate: 0 7vw;
+    font-size: 0.8vw;
+    transition: 0.9s;
+    box-shadow: 0 0 30px #222;
+}
+
+.box:hover .project-title {
+    display: flex;
+}
+
+.box:hover .project-image {
+    filter: blur(5px);
+    scale: 1.1;
+}
+
+
+@keyframes show {
+    0% {
+        transform: translate(0, 20vw);
+        opacity: 0;
+        filter: blur(20px);
+    }
+
+    75%{
+        filter: blur(20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
