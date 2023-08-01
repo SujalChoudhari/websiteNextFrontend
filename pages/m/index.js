@@ -50,7 +50,7 @@ export default function Home() {
 
   return (<>
     <Banner>
-      <a href='/'>Go to the desktop version of this site.</a>
+      <Link href='/'>This website is made for desktop. Go to the desktop version of this site.</Link>
     </Banner>
     <section className="text-gray-400  body-font">
       <div className="container mx-auto flex px-5  md:flex-row flex-col items-center">

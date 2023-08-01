@@ -20,10 +20,9 @@ const MyApp = ({ Component, pageProps, router }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
       </Head>
-
+      <NextNProgress />
       {isMobilePath && (
         <>
-          <NextNProgress />
           <MobileNavbar />
         </>
       )}

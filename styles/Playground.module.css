@@ -8,7 +8,7 @@
     position: fixed; /* Change 'absolute' to 'fixed' */
     left: 1vw; /* Adjust the right distance as needed */
     bottom: 1vh; /* Adjust the bottom distance as needed */
-    z-index: 3;
+    z-index: 1;
 }
 
 

@@ -11,23 +11,22 @@ Employers will find in Sujal a passionate and versatile developer, ready to cont
 Looking for a dynamic team player who can deliver top-notch results? Sujal is your ideal candidate, bringing enthusiasm and expertise to achieve success in the world of technology.`;
 
 export const navigationLinks = [
-    {name: "Home", link: "/"},
-    {name: "About", link: "/about"},
-    {name: "Blog", link: "/blog"},
-    {name: "Guestbook", link: "/guestbook"},
-    {name: "Projects", link: "/projects"},
-    {name: "Gallery", link: "/gallery"},
-    {name: "Notes", link: "/notes"},
-    {name: "Contact", link: "/contact"},
+    { name: "Home", link: "/" },
+    { name: "About", link: "/about" },
+    { name: "Guestbook", link: "/guestbook" },
+    { name: "Projects", link: "/projects" },
+    { name: "Gallery", link: "/gallery" },
+    { name: "Notes", link: "/notes" },
+    { name: "Contact", link: `mailto:?subject= Contact from your Website&body=Hi Sujal, visit your website and...` },
+    { name: "Resume", link: "/Sujal Choudhari.pdf" }
 
 ];
 
-export const  mobileNavigationLinks = [
-    {name: "Home", link: "/m/"},
-    {name: "About", link: "/m/about"},
-    {name: "Blog", link: "/m/blog"},
-    {name: "Guestbook", link: "/m/guestbook"},
-    {name: "Projects", link: "/m/projects"},
-    {name: "Gallery", link: "/m/gallery"},
-    {name: "Notes", link: "/m/notes"},
+export const mobileNavigationLinks = [
+    { name: "Home", link: "/m/" },
+    { name: "About", link: "/m/about" },
+    { name: "Guestbook", link: "/m/guestbook" },
+    { name: "Projects", link: "/m/projects" },
+    { name: "Gallery", link: "/m/gallery" },
+    { name: "Notes", link: "/m/notes" },
 ];

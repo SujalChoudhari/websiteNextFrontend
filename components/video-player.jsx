@@ -11,7 +11,6 @@ function VideoBackgroundPlayer({ src }) {
         src={src}
         autoPlay
         loop
-        preload='auto'
         muted
       />
     </div>

@@ -17,14 +17,12 @@ const CircularLinks = ({ links }) => {
             const linkHolderEl = document.createElement('div');
             linkHolderEl.className = styles['link-holder'];
             const linkEl = document.createElement('a');
-            linkEl.href = link.url;
+            linkEl.href = link.link;
             linkEl.className = styles.link;
             linkHolderEl.style.transform = `rotate(${(Math.PI/2 -  angle*index).toFixed(5)}rad) translate(${radius + 5 * index}px) rotate(${-(
                 Math.PI/2 - angle * index
             ).toFixed(5)}rad)`;
-
             linkEl.textContent = link.name;
-
             linkHolderEl.appendChild(linkEl);
             circle.appendChild(linkHolderEl);
         });
