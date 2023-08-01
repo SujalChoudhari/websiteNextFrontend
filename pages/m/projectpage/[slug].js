@@ -28,7 +28,6 @@ function ProjectPage(props) {
 
                             <div className="sm:w-2/3 leading-relaxed text-lg sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left text-white">
                                     <PortableText
-
                                         content={project.body}
                                         projectId={process.env.SANITY_PROJECT_ID}
                                         dataset={process.env.SANITY_DATASET}

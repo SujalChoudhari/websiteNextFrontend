@@ -92,6 +92,7 @@
     background-color: rgba(29, 29, 29, 0.236);
     border-radius: 5px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .output-section-show {

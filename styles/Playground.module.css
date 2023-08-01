@@ -1,18 +1,14 @@
 .playground-container {
-    z-index: 9999;
-}
-
-/* The rest of your existing CSS remains unchanged */
-.playground-container {
     padding: 10px;
     font-size: 1rem;
     white-space: pre-wrap;
     overflow-y: auto;
-    width: 40vw;
+    width: 35vw;
     color: #ffffff40;
     position: fixed; /* Change 'absolute' to 'fixed' */
     left: 1vw; /* Adjust the right distance as needed */
     bottom: 1vh; /* Adjust the bottom distance as needed */
+    z-index: 3;
 }
 
 

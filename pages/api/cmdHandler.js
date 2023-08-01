@@ -168,7 +168,8 @@ function whoamiHandler() {
 }
 
 function sudoHandler(command) {
-    return "Permission denied.";
+    const cmd = command.substring("sudo".length).trim();
+    return `Sorry, user guest is not allowed to execute '${cmd}' as root.`;
 }
 
 

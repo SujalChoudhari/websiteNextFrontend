@@ -6,7 +6,7 @@ const Playground = () => {
     const [command, setCommand] = useState('');
     const [output, setOutput] = useState('');
     const router = useRouter();
-    const userName = "user@ubuntu:/home/user/documents# ";
+    const userName = "guest@ubuntu:/home/user/documents# ";
 
     const handleCommandChange = (event) => {
         setCommand(event.target.value);
