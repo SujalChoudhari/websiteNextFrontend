@@ -15,11 +15,11 @@ export default function Home() {
       </Banner>
       <VideoBackgroundPlayer src="./coding.mp4"/>
 
-      <span>
+      <main>
         <CircularLinks
           links={navigationLinks}
         />
-      </span>
+      </main>
     </>
   )
 }

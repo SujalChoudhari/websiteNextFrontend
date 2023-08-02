@@ -32,7 +32,7 @@ function Projects(props) {
                                     while
                                 >
                                     <div className="h-full border-2 border-gray-800  bg-gray-900 rounded-lg overflow-hidden">
-                                        <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.image.url} alt="project" />
+                                        <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={project.image.url} alt={`project image of ${project.title}`} />
                                         <div className="p-6">
                                             {
                                                 project.tag?.map((tags) => {

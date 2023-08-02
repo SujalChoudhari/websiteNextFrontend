@@ -7,7 +7,7 @@ function MobileNavbar() {
     return (
         <>
             <header className="text-gray-400 bg-gray-900 body-font">
-                <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" >
+                <nav className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" >
                     <Link href="/m/" className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
                         <motion.img
                             duration={1}
@@ -24,7 +24,7 @@ function MobileNavbar() {
                             </svg>
                         </button>
                     </Link>
-                </div>
+                </nav>
             </header>
             <motion.div
                 animate={{
