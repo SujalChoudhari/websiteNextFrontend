@@ -54,6 +54,7 @@ const CircularLinks = ({ links }) => {
                     <img
                         src="./pfp.png"
                         alt="My profile picture"
+                        title='Sujal Choudhari'
                         className={styles.image}
                     />
                 </div>

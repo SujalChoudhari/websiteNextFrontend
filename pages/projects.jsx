@@ -54,7 +54,7 @@ function Projects(props) {
     };
 
     return (
-        <div className={styles['container']}
+        <section className={styles['container']}
         >
             {selectedProjectId && <ProjectPage key={key} id={selectedProjectId} />}
             <div className={styles['input-container']}>
@@ -91,7 +91,7 @@ function Projects(props) {
                     );
                 })}
             </motion.section>
-        </div>
+        </section>
     );
 }
 

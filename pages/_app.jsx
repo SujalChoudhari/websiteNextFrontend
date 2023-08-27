@@ -22,7 +22,7 @@ const MyApp = ({ Component, pageProps, router }) => {
         />
         <meta
           name="keywords"
-          content="Sujal Vivek Choudhari, Sujal Choudhari, Web Developer, App Developer, Game Developer, Portfolio"
+          content="Sujal Vivek Choudhari, Sujal Choudhari, Sujal, Web Developer, App Developer, Game Developer, Portfolio"
         />
         <meta httpEquiv="Content-Language" content="en" />
         <meta charSet="UTF-8" />
@@ -50,7 +50,7 @@ const MyApp = ({ Component, pageProps, router }) => {
 
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
       </Head>
 

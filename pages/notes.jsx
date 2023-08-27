@@ -44,7 +44,7 @@ function Notes(props) {
     }
 
     return (
-        <div className={styles['container']}
+        <section className={styles['container']}
         >
             <div className={styles['input-container']}>
                 <p className={styles['input-title']}>Start with a detailed description
@@ -82,7 +82,7 @@ function Notes(props) {
                     );
                 })}
             </motion.section>
-        </div>
+        </section>
     );
 }
 

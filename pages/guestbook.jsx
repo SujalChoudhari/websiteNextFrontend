@@ -6,7 +6,7 @@ import VideoBackgroundPlayer from '../components/video-player'
 function GuestBook(props) {
     const { comments } = props
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles['display-container']}>
                 {comments.map(comment => (
                     <div className={styles['comment-container']}>
@@ -15,13 +15,8 @@ function GuestBook(props) {
                     </div>
                 ))}
             </div>
-            {/* <div className={styles['input-container']}>
-                <input className={styles['name-field']} type="text" name="name" id="name" placeholder="Name" />
-                <textarea className={styles['input-field']} name="message" id="message" cols="30" rows="7" placeholder='He is ...'></textarea>
-                <button className={styles['submit-button']}>Sign</button>
-            </div> */}
             <SignBook/>
-        </div>
+        </section>
     )
 }
 

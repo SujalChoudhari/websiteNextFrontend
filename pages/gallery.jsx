@@ -7,7 +7,7 @@ import styles from '../styles/Gallery.module.css'
 function Gallery(props) {
     const { urls } = props;
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <ImageGallery 
             items={urls}
             lazyLoad={true}
@@ -21,7 +21,7 @@ function Gallery(props) {
             showNav={false}
              />
 
-        </div>
+        </section>
     )
 }
 
