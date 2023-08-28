@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import CountUp from 'react-countup';
 import Skillbar from 'react-skillbars';
-import Banner from '../../components/banner';
 import { motion } from 'framer-motion'
 
 
@@ -49,10 +48,7 @@ export default function Home() {
   ]
 
   return (<>
-    <Banner>
-      <Link href='/'>This website is made for desktop. Go to the desktop version of this site.</Link>
-    </Banner>
-    <section className="text-gray-400  body-font">
+    <section className="text-gray-400 body-font">
       <div className="container mx-auto flex px-5  md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:mx-4 lg:mx-8 md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl  mb-4 font-medium text-white">Hey there,
@@ -86,7 +82,7 @@ export default function Home() {
           </p>
 
           <div className="flex justify-center">
-            <Link href="/projects">
+            <Link href="/m/projects">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}

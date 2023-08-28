@@ -1,5 +1,6 @@
 import React from 'react';
 import NextNProgress from 'nextjs-progressbar';
+import Link from 'next/link';
 import Head from 'next/head';
 import { Analytics } from '@vercel/analytics/react';
 import MobileNavbar from '../components/mobile-navbar';
@@ -7,6 +8,8 @@ import Navbar from '../components/navbar';
 import MobileRedirection from '../components/mobile-redirection';
 import Footer from '../components/mobile-footer';
 import Playground from '../components/playground';
+import Banner from '../components/banner';
+
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps, router }) => {
@@ -50,7 +53,7 @@ const MyApp = ({ Component, pageProps, router }) => {
 
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
       </Head>
 
@@ -58,6 +61,9 @@ const MyApp = ({ Component, pageProps, router }) => {
       {isMobilePath && (
         <>
           <MobileNavbar />
+          <Banner>
+            <Link href='/'>Have better exprience with this site on desktop. Go to the desktop version of this site.</Link>
+          </Banner>
         </>
       )}
 

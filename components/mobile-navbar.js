@@ -6,7 +6,7 @@ import NavigationLinks from './mobile-navigation-links'
 function MobileNavbar() {
     return (
         <>
-            <header className="text-gray-400 bg-gray-900 body-font">
+            <header className="text-gray-400 pt-8 md:pt-0 bg-gray-900 body-font">
                 <nav className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" >
                     <Link href="/m/" className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
                         <motion.img
