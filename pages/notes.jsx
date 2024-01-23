@@ -28,7 +28,7 @@ function Notes(props) {
         'Generate Notes created by Sujal',
     ]
 
-    const [inputText, setInputText] = React.useState('Projects created by Sujal');
+    const [inputText, setInputText] = React.useState('Notes created by Sujal');
     const changeInputText = () => {
         const randomIndex = Math.floor(Math.random() * inputTexts.length);
         setInputText(inputTexts[randomIndex]);

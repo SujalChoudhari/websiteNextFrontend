@@ -33,8 +33,6 @@ function About() {
 
 
     return <>
-        <VideoBackgroundPlayer src="./abstract1.mp4" />
-
         <section className={styles.container}>
             <div>
                 <Image className={styles['image-left']} src="/sujal.png" alt="Picture of the author" width={400} height={300} onLoad={startAnimation} />
