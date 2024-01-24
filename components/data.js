@@ -17,9 +17,8 @@ export const navigationLinks = [
     { name: "Projects", link: "/projects" },
     { name: "Gallery", link: "/gallery" },
     { name: "Notes", link: "/notes" },
-    { name: "Contact", link: `mailto:?subject= Contact from your Website&body=Hi Sujal, visit your website and...` },
-    { name: "Resume", link: "/Sujal Choudhari.pdf" }
-
+    { name: "Contact", link: `mailto:contact@sujal.xyz?subject= Contact from your Website&body=Hi Sujal, visit your website and...` },
+    { name: "Resume", link: "/SujalChoudhari.pdf" }
 ];
 
 export const mobileNavigationLinks = [

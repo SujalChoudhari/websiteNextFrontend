@@ -29,11 +29,15 @@
     z-index: 1;
 }
 
+
+
+
 .image{
     width: 40vw;
     height: 40vw;
     border-radius: 30px;
     object-fit: cover;
+    flex:1;
 }
 
 .project-data{
@@ -41,7 +45,12 @@
     padding: 1vw;
     margin-left: 1vw;
     border-radius: 10px;
-    height: 70vh;
+    height: 85vh;
+    flex: 2;
+}
+
+.project-data a {
+    color: aquamarine;
 }
 
 .project-title{
@@ -53,6 +62,30 @@
 .project-body{
     font-size: 1vw;
     margin-bottom: 1vh;
+}
+
+.category-holder {
+    margin-top: 10vh;
+}
+
+.category-holder  h3 {
+    font-weight: bold;
+    display: inline-block;
+    background-color: aliceblue;
+    color: #181818;
+    padding: 0.3vh 0.3vw;
+    border-radius: 8px;
+    font-variant-caps:petite-caps;
+}
+
+.category-holder  h4 {
+    font-weight:700;
+    font-variant-caps: small-caps;
+}
+
+.category-holder p {
+    font-weight: 100;
+    font-size: small;
 }
 
 .close-button{

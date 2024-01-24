@@ -1,12 +1,13 @@
 .navbar {
-    z-index: 9999;
+    z-index: 3;
     position: fixed;
     bottom: 0;
     right: 0;
     opacity: 0.3;
     transform: translate(50%) rotate(90deg) translate(-50%);
     padding-top: 2vw;
-    width: 98vh;
+    width: 100vh;
+    height: 2vw;
     display: flex;
     justify-content: space-evenly;
 }
@@ -18,8 +19,8 @@
 .link {
     color: #fff;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-variant-caps: all-petite-caps;
-    font-size: 1.3vw;
+    font-variant: small-caps;
+    font-size: 1.4vw;
 }
 
 .link:hover {

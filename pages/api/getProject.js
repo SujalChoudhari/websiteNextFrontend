@@ -19,7 +19,7 @@ export default async function handler(req, res) {
     "image" : mainImage.asset->url,
     "slug": slug.current,
     body,
-    categories[]->{title}
+    categories[]->{title,description}
   }`;
 
     try {

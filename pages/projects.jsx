@@ -6,7 +6,7 @@ import ProjectPage from '../components/projectpage';
 
 function Projects(props) {
     const { projects } = props;
-
+    const [randomizedProjects, setRandomizedProjects] = useState(projects)
     const cardVariants = {
         offscreen: {
             y: 300
@@ -30,6 +30,16 @@ function Projects(props) {
         'Create a list of projects created by Sujal',
     ]
 
+    const shuffleProjects = (array) => {
+        const shuffledArray = [...array];
+        for (let i = shuffledArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+        }
+        return shuffledArray;
+    };
+
+
     const [inputText, setInputText] = React.useState('Projects created by Sujal');
     const changeInputText = () => {
         const randomIndex = Math.floor(Math.random() * inputTexts.length);
@@ -40,6 +50,7 @@ function Projects(props) {
 
     const showOutputHandler = () => {
         setShowOutput(false);
+        setRandomizedProjects(shuffleProjects(randomizedProjects))
         setTimeout(() => {
             setShowOutput(true);
         }, 200);
@@ -78,9 +89,9 @@ function Projects(props) {
                 className={`${styles['output-card-section']} ${showOutput ? styles['output-section-show'] : ''
                     }`}
             >
-                {projects.map((project) => {
+                {randomizedProjects.map((project) => {
                     return (
-                        <motion.div initial="offscreen" whileInView="onscreen" viewport={{ once: true, amount: 0.5 }}>
+                        <motion.div key={project._id} initial="offscreen" whileInView="onscreen" viewport={{ once: true, amount: 0.5 }}>
                             <div key={project._id} className={styles['box']} onClick={() => handleButtonPress(project._id)}>
                                 <motion.div className={styles['project-image-holder']} variants={cardVariants}>
                                     <img className={styles['project-image']} src={project.image.url} alt="" />
@@ -104,7 +115,7 @@ export async function getServerSideProps() {
         useCdn: process.env.SANITY_USE_CDN,
     })
 
-    const query = '*[_type == "project"]{title,_id,body,slug,"image" : mainImage.asset->{url},tag[]->{title}}'
+    const query = '*[_type == "project"]{title,_id,body,categories,slug,"image" : mainImage.asset->{url},tag[]->{title}}'
     const projects = await client.fetch(query)
 
     return {

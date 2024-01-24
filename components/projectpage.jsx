@@ -9,6 +9,7 @@ function ProjectPage({ id }) {
         const res = await fetch(`/api/getProject?slug=${id}`);
         const { project } = await res.json();
         setProject(project);
+        console.log(project)
     };
 
     useEffect(() => {
@@ -38,6 +39,15 @@ function ProjectPage({ id }) {
                             dataset={process.env.SANITY_DATASET}
                         />
                     )}
+                    <div className={styles['category-holder']}>
+                        {project.categories && <h3>Tags</h3>}
+                        {project.categories && project.categories.map((category, index) => (
+                            <div key={index}>
+                                <h4>{category.title} </h4>
+                                <p>{category.description}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
                 <div className={styles['close-button']} onClick={handleDestroy}>
                     X

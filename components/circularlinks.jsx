@@ -4,7 +4,6 @@ import styles from '../styles/CircularLinks.module.css';
 const CircularLinks = ({ links }) => {
     const circleRef = useRef(null);
     const [circleSize, setCircleSize] = useState(400); // Initial circle size (width and height)
-
     useEffect(() => {
         if (!circleRef.current) return;
 
@@ -12,6 +11,7 @@ const CircularLinks = ({ links }) => {
         const circle = circleRef.current;
         const angle = (Math.PI ) / numLinks;
         const radius = circle.clientHeight / 2;
+
 
         links.forEach((link, index) => {
             const linkHolderEl = document.createElement('div');
@@ -25,7 +25,7 @@ const CircularLinks = ({ links }) => {
             linkEl.textContent = link.name;
             linkHolderEl.appendChild(linkEl);
             circle.appendChild(linkHolderEl);
-        });
+        },[links]);
 
         // Update circle size dynamically based on the container width
         const handleResize = () => {
