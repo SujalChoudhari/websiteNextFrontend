@@ -59,7 +59,6 @@
 
 .link-holder:hover {
     /* color: #a5a5a5;  */
-    scale: 0.93;
     color: #70f8ff;
     transition: 0.2s;
 }

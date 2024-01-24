@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from '../styles/Guestbook.module.css'
 import SignBook from '../components/mobile-sign-book'
-import VideoBackgroundPlayer from '../components/video-player'
 
 function GuestBook(props) {
     const { comments } = props
     return (
         <section className={styles.container}>
+            <SignBook/>
+                <h3 className={styles.title}>What others have to say?</h3>
             <div className={styles['display-container']}>
                 {comments.map(comment => (
                     <div className={styles['comment-container']}>

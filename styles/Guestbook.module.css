@@ -10,6 +10,15 @@
     z-index: 4;
 }
 
+.title {
+    font-size: 4vh;
+    margin-bottom: 2vh;
+    font-weight: bolder;
+} 
+
+.desc {
+    margin-bottom: 2vh;
+}
 
 .display-container {
     background-color: #222a;
@@ -31,7 +40,6 @@
     align-items: center;
     padding: 1vw;
     background-color: #111a;
-    border-radius: 20px 20px 0;
     transition: 0.4s;
 }
 

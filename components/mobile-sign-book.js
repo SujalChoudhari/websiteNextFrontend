@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { NextResponse } from 'next/server'
+import { useRouter } from 'next/router'
 
 function SignBook() {
     const [name, setName] = useState('')
     const [message, setMessage] = useState('')
     const [submit, setSubmit] = useState("Submit")
     const [submitted, setSubmitted] = useState(false)
+    const router = useRouter();
 
 
     function nameChanged(event) {
@@ -18,7 +20,8 @@ function SignBook() {
     }
 
     function submitPressed(ctx) {
-         fetch('/api/addComment', {
+
+        fetch('/api/addComment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -27,7 +30,7 @@ function SignBook() {
         })
             .then((response) => response)
             .then((data) => {
-                if(data.status === 200){
+                if (data.status === 200) {
                     setName('')
                     setMessage('')
                     setSubmit("Thank you!")
@@ -35,7 +38,7 @@ function SignBook() {
                     return NextResponse.redirect(ctx.req.url)
                 }
             })
-
+        router.reload();
     }
 
     return (
@@ -69,7 +72,7 @@ function SignBook() {
                                     onClick={submitPressed}
                                     animate={{ d: submitted ? 0 : 1 }}
 
-                                className="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">{submit}</motion.button>
+                                    className="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">{submit}</motion.button>
                             </div>
                         </div>
                     </div>
