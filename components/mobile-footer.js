@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import styles from '../styles/Footer.module.css'
 import { motion } from 'framer-motion'
 import NavigationLinks from './mobile-navigation-links'
+import SocialLinks from "./mobile-social-links"
 
 function Footer() {
     return (
@@ -31,27 +31,7 @@ function Footer() {
                     <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">A Computer Enthusiast
                     </p>
                     <NavigationLinks/>
-                    <div className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start space-x-4">
-                        <a href="https://www.facebook.com/sujal.choudhary.921/" className={styles.facebook} target="_blank " rel="noopener">
-                            <i className="fab fa-facebook fa-2x" />
-                        </a>
-                        <a href="https://twitter.com/Sujal212004" className={styles.twitter} target="_blank" rel="noopener">
-                            <i className="fab fa-twitter fa-2x" />
-                        </a>
-                        <a href="https://www.instagram.com/_sujal_choudhari_" className={styles.instagram} target="_blank" rel="noopener">
-                            <i className="fab fa-instagram fa-2x"></i>
-                        </a>
-                        <a href="https://www.github.com/sujalchoudhari" className={styles.github} target="_blank" rel="noopener">
-                            <i className="fab fa-github fa-2x"></i>
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCOWnU50ubRDLUrshiuPiQgg?view_as=subscriber" className={styles.youtube}
-                            target="_blank" rel="noopener">
-                            <i className="fab fa-youtube fa-2x"></i>
-                        </a>
-                        <a href="https://t.me/sujalchoudhari" className={styles.telegram} target="_blank" rel="noopener">
-                            <i className="fab fa-telegram fa-2x"></i>
-                        </a>
-                    </div>
+                    <SocialLinks/>
                 </div>
             </footer>
         </>

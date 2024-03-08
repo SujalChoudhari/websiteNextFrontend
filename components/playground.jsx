@@ -68,12 +68,14 @@ const Playground = () => {
                 <span className={styles['playground-user']}>{userName}</span>
                 <input
                     type="text"
+                    width={30}
                     value={command}
                     onChange={handleCommandChange}
                     onKeyDown={handleSubmit}
                     className={styles['playground-input']}
                     placeholder="ls"
                 />
+                
             </div>
         </div>
     );

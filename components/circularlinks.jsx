@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from '../styles/CircularLinks.module.css';
+import Image from 'next/image'
 
 const CircularLinks = ({ links }) => {
     const circleRef = useRef(null);
@@ -9,7 +10,7 @@ const CircularLinks = ({ links }) => {
 
         const numLinks = links.length;
         const circle = circleRef.current;
-        const angle = (Math.PI ) / numLinks;
+        const angle = (Math.PI) / numLinks;
         const radius = circle.clientHeight / 2;
 
 
@@ -19,13 +20,13 @@ const CircularLinks = ({ links }) => {
             const linkEl = document.createElement('a');
             linkEl.href = link.link;
             linkEl.className = styles.link;
-            linkHolderEl.style.transform = `rotate(${(Math.PI/2 -  angle*index).toFixed(5)}rad) translate(${radius + 5 * index}px) rotate(${-(
-                Math.PI/2 - angle * index
+            linkHolderEl.style.transform = `rotate(${(Math.PI / 2 - angle * index).toFixed(5)}rad) translate(${radius + 5 * index}px) rotate(${-(
+                Math.PI / 2 - angle * index
             ).toFixed(5)}rad)`;
             linkEl.textContent = link.name;
             linkHolderEl.appendChild(linkEl);
             circle.appendChild(linkHolderEl);
-        },[links]);
+        }, [links]);
 
         // Update circle size dynamically based on the container width
         const handleResize = () => {
@@ -47,12 +48,16 @@ const CircularLinks = ({ links }) => {
         <div className={styles.container}>
             <div
                 ref={circleRef}
-                className={`${styles.circle} w-${circleSize} h-${circleSize}`}
+                className={`${styles.holder} w-${circleSize} h-${circleSize}`}
                 style={{ borderRadius: `${circleSize}px` }}
             >
+                <div className={styles.circle} />
                 <div className={styles.center}>
-                    <img
-                        src="./pfp.png"
+                    <Image
+                        src="/pfp.png"
+                        loading="lazy"
+                        width={1024}
+                        height={1024}
                         alt="My profile picture"
                         title='Sujal Choudhari'
                         className={styles.image}

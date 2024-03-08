@@ -10,15 +10,45 @@ Employers will find in Sujal a passionate and versatile developer, ready to cont
 
 Looking for a dynamic team player who can deliver top-notch results? Sujal is your ideal candidate, bringing enthusiasm and expertise to achieve success in the world of technology.`;
 
+export const aboutMeAsQuestions = {
+    "questions": [
+        {
+            "title": "Sujal's Programming Journey",
+            "sub": "Early Coding Foundation",
+            "question": "What is Sujal's programming background?",
+            "answer": "Sujal embarked on his programming journey from a young age, cultivating a dedicated and passionate approach to development. With a robust foundation established early on, coding became an integral part of his life, shaping his path towards becoming a versatile and skilled developer."
+        },
+        {
+            "title": "Proficiency and Specialization",
+            "sub": "Mastering Python, JavaScript, and C#",
+            "question": "What are Sujal's expertise areas?",
+            "answer": "Sujal boasts proficiency in a diverse range of programming languages, including Python, JavaScript, and C#. His specialization shines in Unity Game Development, where he has delved into creating engaging games for various platforms, showcasing his prowess in the dynamic realm of game development."
+        },
+        {
+            "title": "Excelling in Web Technologies",
+            "sub": "Modern Skills and Creative Problem-Solving",
+            "question": "What are Sujal's web tech skills and problem-solving approach?",
+            "answer": "Sujal excels in modern web technologies such as HTML, CSS, React, and Next.js, staying at the forefront of industry trends. His problem-solving approach is marked by creativity and innovation, consistently striving to push boundaries and deliver solutions that go beyond conventional expectations."
+        },
+        {
+            "title": "Impactful Contributions and Continuous Growth",
+            "sub": "Professional Contributions and Commitment",
+            "question": "How does Sujal contribute to employers and demonstrate commitment to improvement?",
+            "answer": "Sujal is not just a developer; he is a passionate and versatile contributor to impactful projects. His commitment to continuous improvement is evident in his proactive exploration of new technological frontiers, ensuring that he remains at the cutting edge of advancements. Employers can rely on Sujal to bring enthusiasm, expertise, and a determination to create exceptional technological solutions."
+        }
+    ]
+}
+
+
 export const navigationLinks = [
-    { name: "Home", link: "/" },
-    { name: "About", link: "/about" },
-    { name: "Guestbook", link: "/guestbook" },
-    { name: "Projects", link: "/projects" },
-    { name: "Gallery", link: "/gallery" },
-    { name: "Notes", link: "/notes" },
     { name: "Contact", link: `mailto:contact@sujal.xyz?subject= Contact from your Website&body=Hi Sujal, visit your website and...` },
-    { name: "Resume", link: "/SujalChoudhari.pdf" }
+    { name: "Notes", link: "/notes" },
+    { name: "Gallery", link: "/gallery" },
+    { name: "Projects", link: "/projects" },
+    { name: "Guestbook", link: "/guestbook" },
+    { name: "About", link: "/about" },
+    { name: "Resume", link: "/SujalChoudhari.pdf" },
+    { name: "Home", link: "/" },
 ];
 
 export const mobileNavigationLinks = [

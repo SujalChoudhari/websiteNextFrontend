@@ -1,18 +1,39 @@
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
-    transform: translate(10vw); 
+    height: 100vh;
+    transform: translate(5vw);
 }
-.circle {
+
+.holder {
     position: relative;
+    width: 30vw;
+    height: 30vw;
+}
+
+.circle {
+    position: absolute;
+    z-index: 0;
     border-radius: 50%;
     background-color: #2a2a2a0c;
     box-shadow: 0 0 50px rgb(32, 32, 32);
     backdrop-filter: blur(10px);
     width: 30vw;
     height: 30vw;
+}
+
+.holder {
+    animation: bob 1s ease-in-out 1;
+}
+
+.circle {
+    animation: pulse 5s ease-in-out infinite;
+    transition: all 2s;
+}
+
+.holder:hover .circle {
+    transform: scale(2.5);
 }
 
 .center {
@@ -53,7 +74,7 @@
     align-items: center;
 }
 
-.link-holder{
+.link-holder {
     animation: start 1s ease 1;
 }
 
@@ -64,7 +85,38 @@
 }
 
 @keyframes start {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
+}
+
+@keyframes bob {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        scale: 1;
+    }
+
+    25% {
+        scale: 0.9;
+    }
+
+    50% {
+        scale: 1;
+    }
+
+    75% {
+        scale: 0.8;
+    }
+
 }

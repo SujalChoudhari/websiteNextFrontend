@@ -11,6 +11,7 @@ import Playground from '../components/playground';
 import Banner from '../components/banner';
 
 import '../styles/globals.css';
+import SocialLinksHover from "../components/social-links";
 
 const MyApp = ({ Component, pageProps, router }) => {
   const isMobilePath = router.pathname.includes('m');
@@ -29,7 +30,6 @@ const MyApp = ({ Component, pageProps, router }) => {
         />
         <meta httpEquiv="Content-Language" content="en" />
         <meta charSet="UTF-8" />
-
         <meta name="author" content="Sujal Vivek Choudhari" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#000000" />
@@ -71,6 +71,7 @@ const MyApp = ({ Component, pageProps, router }) => {
       {!isMobilePath && router.pathname !== '/' && <Navbar />}
       {!isMobilePath && <MobileRedirection />}
       {!isMobilePath && <Playground />}
+      {!isMobilePath && <SocialLinksHover />}
       <Analytics />
 
       {isMobilePath && <Footer />}
