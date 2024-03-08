@@ -11,7 +11,7 @@ const CircularLinks = ({ links }) => {
         const numLinks = links.length;
         const circle = circleRef.current;
         const angle = (Math.PI) / numLinks;
-        const radius = circle.clientHeight / 2;
+        const radius = circle.clientHeight * 0.5;
 
 
         links.forEach((link, index) => {
@@ -20,8 +20,8 @@ const CircularLinks = ({ links }) => {
             const linkEl = document.createElement('a');
             linkEl.href = link.link;
             linkEl.className = styles.link;
-            linkHolderEl.style.transform = `rotate(${(Math.PI / 2 - angle * index).toFixed(5)}rad) translate(${radius + 5 * index}px) rotate(${-(
-                Math.PI / 2 - angle * index
+            linkHolderEl.style.transform = `rotate(${(Math.PI * 0.4 - angle * index).toFixed(5)}rad) translate(${radius + (index * index)}px) rotate(${-(
+                Math.PI * 0.4 - angle * index
             ).toFixed(5)}rad)`;
             linkEl.textContent = link.name;
             linkHolderEl.appendChild(linkEl);

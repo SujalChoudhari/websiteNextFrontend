@@ -42,7 +42,6 @@ export const aboutMeAsQuestions = {
 
 export const navigationLinks = [
     { name: "Contact", link: `mailto:contact@sujal.xyz?subject= Contact from your Website&body=Hi Sujal, visit your website and...` },
-    { name: "Notes", link: "/notes" },
     { name: "Gallery", link: "/gallery" },
     { name: "Projects", link: "/projects" },
     { name: "Guestbook", link: "/guestbook" },
